@@ -37,4 +37,10 @@ router.route('/users/:user_id')
   })
   .delete(function (req, res, next) {
     next(new Error('not implemented'))
-  })```
+  })
+```
+
+# PARAMETERS
+Like i said above, we can add variables to our endpoints, it can be obtained with req.params . req.params is dictionary. In our example, if i want to get sessionId, i will call ```req.params.sessionId``` or ```req.params[0]```  
+For query parameters you can use `req.query` which is a dictionary of the query parameters. For post requests, you can use `req.body` which is also a dictionary of post parameters.  
+There is also a function called `req.param()`. This is capable of getting the variable from post request, get request, and from the endpoint.
