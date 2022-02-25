@@ -1,4 +1,4 @@
-Express is a famous javascript library for backend development that can be used both on typescript and node
+Express is a famous javascript library for backend development that can be used both on typescript and node. It is simple and you can see the api documentation here https://expressjs.com/en/api.html#res.location.
 
 # ROUTING
 Express has a class called Router which is responsible for routing endpoints. There are multiple functions for routing endpoints, most famous are get() post(), put(), delete(). The syntax is 
