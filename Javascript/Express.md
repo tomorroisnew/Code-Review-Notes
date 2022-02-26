@@ -38,6 +38,12 @@ router.route('/users/:user_id')
   .delete(function (req, res, next) {
     next(new Error('not implemented'))
   })
+```    
+app.use(). Match and endpoint and execute the middlewares. Example    
+```js
+app.use('/abcd', function (req, res, next) {
+  next()
+})
 ```
 
 # PARAMETERS
