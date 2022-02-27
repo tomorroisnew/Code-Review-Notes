@@ -13,7 +13,7 @@ We can also pass variables to the endpoints, and it will be an argument to the f
 def hello_guest(guest):
    return 'Hello %s as Guest' % guest
 ```
-Aside from route, we can also use `.endpoint()` which works like route, and `.before_request()`, this triggers on every requests, before the request is made, so worth checking out.     
+Aside from route, we can also use `.endpoint()` which works like route, and `.before_request()`, this triggers on every requests, before the request is made, so worth checking out, and `.after_request()`, just like `before_request()`  but triggers after every requests.    
 There is also a function called `add_url_rule()`. It is the same as `.route()`. `.route()` is just a decorator for `add_url_rule()`. The syntax for it is `add_url_rule("/endpoint", view_func=func_to_exec)`
 
 # USER INPUTS
