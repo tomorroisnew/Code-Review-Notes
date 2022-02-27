@@ -20,3 +20,18 @@ Like i said, flask is simple. To get form parameters, use `request.form`, it is 
 
 # TEMPLATES
 Django uses jinja2 for templating. The function for rendering templates is `render_template()`. The syntax is `render_template('template.html', argname=argvalue)`. Normally, variables in templates are automatically escaped that protects to xss. However, using the safe filter or autoescape off will disable the auto encoding. 
+
+# SQLAlchemy
+SQLAlchemy is like flask's implementation of models. It works like sql. In sqlalchemy, tables are classes. These classes have columns which corresponds to the Columns in the database. Example    
+```python
+class User(UserBase, Base):
+    __tablename__ = 'user'
+    __table_args__ = {'sqlite_autoincrement': True}
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(64), unique=True)
+    email = Column(String(120), unique=True, default="")
+    role = Column(SmallInteger, default=constants.ROLE_USER)
+    password = Column(String)
+```
+Column is a class. The first argument of column is the datatype, and it has multiple optional arguemnts. This can then be queried using `.session.query()`
