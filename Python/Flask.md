@@ -17,3 +17,6 @@ Aside from route, we can also use `.endpoint()` which works like route, and `.be
 
 # USER INPUTS
 Like i said, flask is simple. To get form parameters, use `request.form`, it is a dictionary. To get get parmeters, use `request.args.get()`.  To get files parameters, use `request.files`, it is also a dictionary. 
+
+# TEMPLATES
+Django uses jinja2 for templating. The function for rendering templates is `render_template()`. The syntax is `render_template('template.html', argname=argvalue)`. Normally, variables in templates are automatically escaped that protects to xss. However, using the safe filter or autoescape off will disable the auto encoding. 
