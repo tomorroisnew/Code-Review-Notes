@@ -17,7 +17,7 @@ Aside from route, we can also use `.endpoint()` which works like route, and `.be
 There is also a function called `add_url_rule()`. It is the same as `.route()`. `.route()` is just a decorator for `add_url_rule()`. The syntax for it is `add_url_rule("/endpoint", view_func=func_to_exec)`
 
 # USER INPUTS
-Like i said, flask is simple. To get form parameters, use `request.form`, it is a dictionary. To get get parmeters, use `request.args.get()`.  To get files parameters, use `request.files`, it is also a dictionary. 
+Like i said, flask is simple. To get form parameters, use `request.form`, it is a dictionary. To get Get parmeters, use `request.args`, it is also a dictionary.  To get files parameters, use `request.files`, it is also a dictionary. 
 
 # TEMPLATES
 Django uses jinja2 for templating. The function for rendering templates is `render_template()`. The syntax is `render_template('template.html', argname=argvalue)`. Normally, variables in templates are automatically escaped that protects to xss. However, using the safe filter or autoescape off will disable the auto encoding. 
