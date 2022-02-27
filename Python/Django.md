@@ -4,7 +4,7 @@ Django is the most famous python web framework. Complicated but fun to hack.
 Commonly, django apps has a urls.py file, which contains the endpoints that can be accessed in the website.  
 Django uses 3 functions to route endpoints, ```path()```, ```re_path()```, and ```urls()```. The syntax is ```path("/endpoint", FUNCTION_TO_CALL)```  
 ## Examples
-![](Django_routing.PNG)  
+![](img/Django_routing.PNG)  
 Additionally, an include can include more endpoints using the ```include()``` function Example   
 ```py
 url(r'^helpdesk/', include('helpdesk.urls', namespace='helpdesk')),
@@ -43,7 +43,7 @@ class Queue(models.Model):
     )
 ```
 There are multiple types of fields. Just search it up yourself. Models have alot of functions but here are the most used ones. ```save()``` is used to save a Model instace to the databse. Example  
-![](Django_ModelExample.PNG)
+![](img/Django_ModelExample.PNG)
 delete() delete a model. As shown in the example, models also have an object field. This field has multiple functions like get(), and filter() which accepts a field with its value as a parmaeter and return the object with that value in the field. Example  
 ```python
 ticket = Ticket.objects.get(id=ticket_id)
@@ -52,7 +52,7 @@ Here, it gets the Ticket model with the id of ticket_id
 
 # FORMS
 Form class are forms. Like models, these forms have fields.   
-![](Django_ModelFields.PNG)
+![](img/Django_ModelFields.PNG)
 The fields of these forms can be propagated with the post parameters using the syntax. Forms has a method called is_valid to check if the form is valid. Additionally, we can add a Model to a form. By doing so, all of the fields of the model will be inherited by the form unless specified not to. This can be done by adding a Meta Class in the form and adding a model. Example   
 ```py
 class TicketCCForm(forms.ModelForm):
