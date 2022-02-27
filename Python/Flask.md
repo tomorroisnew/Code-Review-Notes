@@ -40,3 +40,5 @@ Column is a class. The first argument of column is the datatype, and it has mult
 user1 = db.session.query(User).filter(User.id == 1)
 ```    
 `User.query.filter(User.id == 1)` can also work. It is the same as above.
+
+# FLASK_WTF
