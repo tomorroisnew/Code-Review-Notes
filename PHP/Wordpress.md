@@ -13,3 +13,7 @@ The three most famous arguments are methods, this is the http method - like GET 
 
 # COMMON BUGS
 All php bugs can exist in wordpress. However, we have to note, in wordpress, there is a thing called magic quotes. All $_REQUEST, $_GET, $_POST, $_COOKIES values are autmatically encoded. It appends backslash on quotes meaning, sqli can be harder to achieve, but xss is still possible. Also, in api, the parameters are not affected by this so there is a higher chance of sqli in api.
+
+# PRACTICE
+<https://wordpress.org/plugins/>
+<https://gist.github.com/joncave/5348689>

@@ -96,3 +96,7 @@ XSS. Normally, when rendering using a template, all variables in the context are
 SSRF when a user controlled input is passed to requests.get
 
 SSTI when a user controlled input is used as a template
+
+# PRACTICE
+<https://djangopackages.org/>
+<https://github.com/adeyosemanputra/pygoat>
