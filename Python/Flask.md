@@ -37,4 +37,5 @@ class User(UserBase, Base):
 Column is a class. The first argument of column is the datatype, and it has multiple optional arguemnts. This can then be queried using `.session.query(User)`. This will return a Query object which has alot of methods on its own like `.filter()`. Example. 
 ```py
 user1 = db.session.query(User).filter(User.id == 1)
-```
+```    
+`User.query.filter(User.id == 1)` can also work. It is the same as above.
