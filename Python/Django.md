@@ -97,6 +97,9 @@ SSRF when a user controlled input is passed to requests.get
 
 SSTI when a user controlled input is used as a template
 
+# REST FRAMEWORK
+Soon, im still confused
+
 # PRACTICE
-<https://djangopackages.org/>
+<https://djangopackages.org/>     
 <https://github.com/adeyosemanputra/pygoat>
