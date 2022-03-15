@@ -37,3 +37,16 @@ public String addFoo(@RequestParam("id") String fooId, @RequestParam String name
 public String restore(@RequestParam("file") MultipartFile file){ //We can also set the variable type anything other than string
 }
 ```
+
+# MODELS 
+models are like the templates in spring. They commonly end in .jsp extensions. To load a view, you use the class `ModelAndView`. To add variables to the view, you use the `addObject()` function in the `ModelAndView` object Example
+```java
+view = new ModelAndView("accounts/login");
+view.addObject("isLogout", "Var1");
+view.addObject("forwardUrl", "Var2");
+```
+In the Template, these variables can be accessed using `${var_name}`
+```java
+var forwardUrl = '${forwardUrl}' || '<c:url value="/" />';
+window.location.href = forwardUrl;
+```
