@@ -36,6 +36,10 @@ public String addFoo(@RequestParam("id") String fooId, @RequestParam String name
 @PostMapping("/import")
 public String restore(@RequestParam("file") MultipartFile file){ //We can also set the variable type anything other than string
 }
+
+@PostMapping("/api/foos")
+public String addFoo(@RequestHeader("header-parameter") int header-parameter) { //Same as above.
+}
 ```
 
 # MODELS 
