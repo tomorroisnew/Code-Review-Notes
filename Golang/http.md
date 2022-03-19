@@ -10,6 +10,15 @@ func SendFederatedMessage(w http.ResponseWriter, r *http.Request) {
     //FUNCTION
 }
 ```
+When using mux, there is also another function called Handle for routing. Example
+```go
+api.BaseRoutes.Bot.Handle("/disable", disableFunc).Methods("POST")
+```
+Mux also has multiple functions that returns a router depending on what you need. Two of the most interesting functions are `PathPrefix()` and `Path()`. These will return a router object.
+Example
+```go
+Posts := api.BaseRoutes.APIRoot.PathPrefix("/posts")
+```
 
 # REQUEST
 Like i said, the second argument is the request, this contains all information about the request.    
