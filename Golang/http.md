@@ -14,10 +14,11 @@ When using mux, there is also another function called Handle for routing. Exampl
 ```go
 api.BaseRoutes.Bot.Handle("/disable", disableFunc).Methods("POST")
 ```
-Mux also has multiple functions that returns a router depending on what you need. Two of the most interesting functions are `PathPrefix()` and `Path()`. These will return a router object.
+Mux also has multiple functions that returns a router depending on what you need. Two of the most interesting functions are `PathPrefix()` and `Path()`. These will return a router object. We can then add handles to this router. 
 Example
 ```go
 Posts := api.BaseRoutes.APIRoot.PathPrefix("/posts")
+Posts.Handle(handlefunc)
 ```
 
 # REQUEST
