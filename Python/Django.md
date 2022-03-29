@@ -98,7 +98,33 @@ SSRF when a user controlled input is passed to requests.get
 SSTI when a user controlled input is used as a template
 
 # REST FRAMEWORK
-Soon, im still confused
+## ROUTING
+Routing are done using the `routers.SimpleRouter()`. Example
+```python
+router = routers.SimpleRouter()
+# ROUTE TO /question
+router.register(r"question", QuestionViewSet)
+# ROUTE TO /answer
+router.register(r"answer", AnswerViewSet)
+urlpatterns = router.urls
+```
+## VIEWSET
+The second argument to a route can be ViewSet Class. This class has a few required options on it. `serializer_class` dictates how the data is serialized and displayed. `queryset` dictates what data to display. `permission_classes` contains the permission required for the api. `filterset_class` is for filtering the output from the queryset. These can also contains functions, which are then routed . example
+```python
+class QuestionViewSet(viewsets.ModelViewSet):
+    serializer_class = QuestionSerializer
+    queryset = Question.objects.all()
+    permission_classes = [
+        OnlyCreatorEdits,
+        permissions.IsAuthenticatedOrReadOnly,
+    ]
+    filterset_class = QuestionFilter
+
+    # @action can be override parameters. For example, the permission class can be override with @action(permission_classes=None)
+    @action(detail=True, methods=["post"])
+    def solve(self, request, pk=None):
+        # FUNCTION BODY
+```
 
 # PRACTICE
 <https://djangopackages.org/>     
