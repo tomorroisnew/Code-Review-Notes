@@ -52,4 +52,4 @@ Another way of routing is through the use of areas. Routing is done by the funct
            );
            //"/Download/Download/{contentItemId}" calls the function DownloadController.Download
 ```
-MapControllerRoute also exist but its nearly similar with MapAreaControllerRoute
+MapControllerRoute also exist but its nearly similar with `MapAreaControllerRoute`
