@@ -29,3 +29,6 @@ $routes->group('admin', static function ($routes) {
     $routes->get('blog', 'Admin\Blog::index');
 });
 ```
+
+# Requests
+The request object can be accessed through `$this->request`, response is `$this->response` 
