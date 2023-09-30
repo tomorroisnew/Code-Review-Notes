@@ -32,6 +32,21 @@ There is another method, called xml by the documentation, but i doubt anyone wil
         // ...
     }
 ```
+Another method is through the routing annotation. 
+```php
++use Symfony\Component\Routing\Annotation\Route;
+
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/")
+     */
+    public function index()
+    {
+        // ...
+    }
+}
+```
 
 # TEMPLATES
 Symfony uses twig for templates. We use the `render` function to render a template. We can also pass the variables in there. For example
